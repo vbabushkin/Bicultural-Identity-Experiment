@@ -1,0 +1,1736 @@
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+body {
+        margin: 0px;
+        padding: 0px;
+      }
+.trialDiv {
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	height: 400px;
+	
+	display: none;
+	
+	/*border: 1px solid red;*/
+	}
+#startExperiment:hover{
+	color:white;
+}
+#instructionsEn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+	
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: justify;
+	
+}
+
+
+#instructionsCn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+	
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: justify;
+	
+}
+
+#consentEn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: justify;
+	display: none;
+}
+
+#consentCn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: justify;
+	display: none;
+}
+
+#debriefEn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: justify;
+	display: none;
+}
+
+#debriefCn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: justify;
+	display: none;
+}
+ 
+.questionsDiv{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: left;
+	
+}
+ 
+ 
+ .panasDiv{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: left;
+	
+}
+
+.senseNonSenseDiv{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: left;	
+	line-height:2;
+}
+
+
+.demographicsDiv{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: left;	
+	line-height:2;
+}
+
+#mortSalienceEn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: left;	
+	line-height:2;
+}
+
+#dentSalienceEn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: left;	
+	line-height:2;
+}
+
+
+#mortSalienceCn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: left;	
+	line-height:2;
+}
+
+#dentSalienceCn{
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: left;	
+	line-height:2;
+}
+
+.button {
+  	-webkit-transition-duration: 0.4s; /* Safari */
+  	transition-duration: 0.4s;
+  	background-color: gray; 
+  	color: black;
+  	margin: 0 auto;
+	width: 200px;
+	padding: 5px;
+  	
+  	margin-top: 100px;
+	text-align: center;
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	float: right;
+  	
+}
+
+.button:hover {
+ 	background-color: gray; 
+  	color: white;
+  	margin: 0 auto;
+	width: 200px;
+	padding: 5px;
+	
+	margin-top: 100px;
+	text-align: center;
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	border: 4px inset gray;
+	float: right;
+	}
+	
+.disabled {
+  	opacity: 0.65; 
+  	cursor: not-allowed;
+  	-webkit-transition-duration: 0.4s; /* Safari */
+  	transition-duration: 0.4s;
+  	background-color: gray; 
+  	color: black;
+  	margin: 0 auto;
+	width: 200px;
+	padding: 5px;
+  	
+  	margin-top: 100px;
+	text-align: center;
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	float: right;
+}
+
+
+
+#endOfExperimentEn{
+	padding-top: 200px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: center;
+	
+}
+#endOfExperimentCn{
+	padding-top: 200px;
+	margin: 0 auto;
+	width: 1340px;
+	
+	display:none;
+	
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	text-align: center;
+	
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+#submitButton{
+	-webkit-transition-duration: 0.4s; /* Safari */
+  	transition-duration: 0.4s;
+  	background-color: gray; 
+  	color: black;
+  	margin: 0 auto;
+	width: 200px;
+	padding: 5px;
+	
+  	margin-top: 100px;
+	text-align: center;
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	float: right;
+	display:none;
+}
+
+#submitButton:hover{
+	background-color: gray; 
+  	color: white;
+  	margin: 0 auto;
+	width: 200px;
+	padding: 5px;
+	
+	margin-top: 100px;
+	text-align: center;
+	font-family: Arial,Helvetica;
+	font-size: 14pt;
+	border: 4px inset gray;
+	float: right;
+}
+</style>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- template for consent in Chinese -->
+<div id = "consentCn"  lang="cn">
+<h1>&#30693;&#24773;&#21516;&#24847;&#20070;</h1>
+<!-- Insert text here -->
+<p>&#25105;&#20204;&#36992;&#35831;&#24744;&#21442;&#21152;&#36825;&#20010;&#20851;&#20110;&#21452;&#37325;&#25991;&#21270;&#36523;&#20221;&#30340;&#30740;&#31350;&#12290;&#30740;&#31350;&#32773;&#20026;&#32445;&#32422;&#22823;&#23398;&#38463;&#24067;&#25166;&#27604;&#20998;&#26657; Kartik Sreenivasan &#21338;&#22763;&#20197;&#21450;&#21512;&#20316;&#32773; Nela Noll &#12290;&#35831;&#35748;&#30495;&#38405;&#35835;&#19979;&#38754;&#30340;&#30740;&#31350;&#31616;&#20171;&#12290;&#22914;&#26524;&#24744;&#36873;&#25321;&#21442;&#21152;&#26412;&#30740;&#31350;&#65292;&#35831;&#21246;&#36873;&#39029;&#38754;&#24213;&#37096;&#30340;&#8220;&#26159;&#30340;&#65292;&#25105;&#25509;&#21463;&#8221;&#36873;&#39033;&#12290;&#22914;&#26524;&#24744;&#19981;&#24819;&#21442;&#21152;&#65292;&#35831;&#21246;&#36873;&#8220;&#19981;&#65292;&#25105;&#25298;&#32477;&#8221;&#36873;&#39033;&#12290;
+&#35874;&#35874;&#65281;</p>
+<p><b>&#30446;&#30340;:</b>&#26412;&#30740;&#31350;&#26088;&#22312;&#26816;&#39564;&#21452;&#37325;&#25991;&#21270;&#36523;&#20221;&#35748;&#21516;&#20197;&#21450;&#23545;&#20110;&#26469;&#33258;&#36825;&#20123;&#25991;&#21270;&#30340;&#21050;&#28608;&#30340;&#21453;&#24212;&#12290;</p>
+<p><b>&#31243;&#24207;:</b>&#20316;&#20026;&#34987;&#35797;&#65292;&#24744;&#30340;&#20219;&#21153;&#26159;&#22635;&#20889;&#19977;&#20010;&#31616;&#21333;&#30340;&#38382;&#21367;&#65292;&#20043;&#21518;&#22312;&#19968;&#20123;&#38382;&#39064;&#20013;&#20889; 4-6 &#20010;&#21477;&#23376;&#20316;&#20026;&#22238;&#31572;&#65292;&#26368;&#21518;&#30475;&#19968;&#20123;&#22270;&#29255;&#24182;&#23545;&#20986;&#29616;&#22312;&#22270;&#29255;&#19978;&#30340;&#22278;&#28857;&#36827;&#34892;&#25353;&#38190;&#21453;&#24212;&#12290;&#23454;&#39564;&#38656;&#35201;&#22823;&#32422;60&#20998;&#38047;&#23436;&#25104;&#12290;</p>
+<p><b>&#33258;&#24895;&#21442;&#21152;:</b>&#21442;&#21152;&#26412;&#30740;&#31350;&#23436;&#20840;&#22522;&#20110;&#33258;&#24895;&#12290;&#24744;&#21487;&#20197;&#36873;&#25321;&#23436;&#25104;&#25110;&#19981;&#23436;&#25104;&#26412;&#30740;&#31350;&#12290;&#24744;&#21487;&#20197;&#25298;&#32477;&#21442;&#21152;&#25110;&#32773;&#22312;&#20219;&#20309;&#26102;&#20505;&#36864;&#20986;&#32780;&#19981;&#20250;&#21463;&#21040;&#24809;&#32602;&#12290;&#22312;&#38382;&#21367;&#37096;&#20998;&#65292;&#24744;&#26377;&#26435;&#36339;&#36807;&#25110;&#19981;&#22238;&#31572;&#20219;&#20309;&#24744;&#19981;&#24819;&#22238;&#31572;&#30340;&#38382;&#39064;&#12290;</p>
+<p><b>&#22870;&#21169;:</b>&#24744;&#21442;&#21152;&#26412;&#23454;&#39564;&#23558;&#33719;&#24471;&#27599;&#23567;&#26102;6&#32654;&#20803;&#30340;&#25253;&#37228;&#12290;</p>
+<p><b>&#30740;&#31350;&#21033;&#30410;:</b>&#26412;&#23454;&#39564;&#21487;&#20197;&#24110;&#21161;&#30740;&#31350;&#32773;&#20102;&#35299;&#21452;&#37325;&#25991;&#21270;&#36523;&#20221;&#35748;&#21516;&#12290;&#23613;&#31649;&#24744;&#19981;&#20250;&#33719;&#24471;&#30452;&#25509;&#21033;&#30410;&#65292;&#20294;&#26159;&#30740;&#31350;&#32467;&#26524;&#33021;&#22815;&#24110;&#21161;&#25105;&#20204;&#26356;&#22909;&#30340;&#29702;&#35299;&#20154;&#20204;&#26159;&#22914;&#20309;&#24418;&#25104;&#24182;&#20445;&#25345;&#21452;&#37325;&#25991;&#21270;&#36523;&#20221;&#35748;&#21516;&#30340;&#12290;</p>
+<p><b>&#39118;&#38505;&#21450;&#19981;&#20415;:</b>&#38500;&#20102;&#33457;&#36153;&#26102;&#38388;&#65292;&#21442;&#21152;&#23454;&#39564;&#26412;&#36523;&#19981;&#20250;&#24102;&#26469;&#20854;&#20182;&#19981;&#20415;&#25110;&#39118;&#38505;&#12290;&#20316;&#20026;&#30740;&#31350;&#20869;&#23481;&#30340;&#19968;&#37096;&#20998;&#65292;&#25105;&#20204;&#21487;&#33021;&#20250;&#38382;&#24744;&#19968;&#20123;&#25935;&#24863;&#35805;&#39064;&#65292;&#20363;&#22914;&#27515;&#20129;&#25110;&#30140;&#30171;&#12290;</p>
+<p><b>&#20445;&#23494;:</b>&#20219;&#20309;&#32463;&#30001;&#26412;&#30740;&#31350;&#33719;&#24471;&#30340;&#26377;&#20851;&#24744;&#36523;&#20221;&#30340;&#20449;&#24687;&#23558;&#20250;&#34987;&#20005;&#26684;&#20445;&#23494;&#65292;&#20381;&#29031;&#27861;&#24459;&#21482;&#20250;&#22312;&#24744;&#21516;&#24847;&#21518;&#25259;&#38706;&#12290;&#30740;&#31350;&#20135;&#29983;&#30340;&#20449;&#24687;&#23558;&#20197;&#36523;&#20221;&#32534;&#30721;&#20445;&#23384;&#22312;&#30005;&#33041;&#20013;&#12290;&#27492;&#32534;&#30721;&#19982;&#24744;&#36523;&#20221;&#20043;&#38388;&#30340;&#20851;&#32852;&#20449;&#24687;&#23558;&#20445;&#23384;&#22312;&#23433;&#20840;&#30340;&#22320;&#28857;&#12290;&#25972;&#20307;&#30340;&#30740;&#31350;&#32467;&#26524;&#21487;&#33021;&#20250;&#21457;&#34920;&#65292;&#20294;&#26159;&#24744;&#30340;&#21517;&#23383;&#21644;&#36523;&#20221;&#20449;&#24687;&#19981;&#20250;&#22312;&#20219;&#20309;&#20986;&#29256;&#29289;&#20013;&#20986;&#29616;&#12290;&#24744;&#30340;&#30740;&#31350;&#35760;&#24405;&#20250;&#20197;&#30005;&#23376;&#25991;&#20214;&#24418;&#24335;&#26080;&#26399;&#38480;&#20445;&#23384;&#22312;&#23433;&#20840;&#30340;&#22320;&#28857;&#12290;&#36825;&#20123;&#25991;&#20214;&#21482;&#26377; Kartik Sreenivasan &#21338;&#22763;&#20197;&#21450;&#20182;&#30340;&#21512;&#20316;&#32773; Nela Noll &#21487;&#20197;&#33719;&#21462;&#12290;</p>
+<p><b>&#32852;&#31995;&#26041;&#24335;:</b>&#26412;&#30740;&#31350;&#30001;&#32445;&#32422;&#22823;&#23398;&#38463;&#24067;&#25166;&#27604;&#20998;&#26657;&#30340; Kartik Sreenivasan &#21338;&#22763;&#36127;&#36131; (kks4@nyu.edu) &#12290;&#22914;&#26524;&#24744;&#26377;&#20219;&#20309;&#20851;&#20110;&#26412;&#30740;&#31350;&#30340;&#38382;&#39064;&#65292;&#35831;&#32852;&#31995;&#21512;&#20316;&#30740;&#31350;&#32773; Nela Noll (nela.noll@nyu.edu) &#12290;&#26412;&#30740;&#31350;&#24050;&#34987;&#32445;&#32422;&#22823;&#23398;&#38463;&#24067;&#25166;&#27604;&#20998;&#26657;&#20154;&#31867;&#34987;&#35797;&#30740;&#31350;&#20262;&#29702;&#23457;&#26597;&#22996;&#21592;&#20250;&#23457;&#26597;&#24182;&#25209;&#20934;&#12290;&#22914;&#26524;&#24744;&#26377;&#28041;&#21450;&#34987;&#35797;&#26435;&#21033;&#30340;&#38382;&#39064;&#65292;&#35831;&#32852;&#31995;&#32445;&#32422;&#22823;&#23398;&#38463;&#24067;&#25166;&#27604;&#20998;&#26657;&#30740;&#31350;&#20262;&#29702;&#23457;&#26597;&#22996;&#21592;&#20250; nyuad@nyu.edu &#25110; +971 2-628-4313 &#12290;</p>
+<p><b>&#30693;&#24773;&#21516;&#24847;:</b>&#28857;&#20987;&#19979;&#26041;&#8220;&#26159;&#30340;&#65292;&#25105;&#21516;&#24847;&#8221;&#65292;&#34920;&#31034;&#24744;&#24050;&#32463;&#38405;&#35835;&#27492;&#30693;&#24773;&#21516;&#24847;&#20070;&#24182;&#19988;&#21516;&#24847;&#21442;&#21152;&#26412;&#23454;&#39564;&#12290;&#24744;&#21487;&#20197;&#25913;&#21464;&#20027;&#24847;&#25110;&#22312;&#20219;&#20309;&#26102;&#20505;&#36864;&#20986;&#30740;&#31350;&#12290;&#22914;&#26524;&#24744;&#24819;&#20445;&#23384;&#27492;&#30693;&#24773;&#21516;&#24847;&#20070;&#20316;&#20026;&#35760;&#24405;&#65292;&#21487;&#20197;&#25353; Windows+Print Screen (PCs) &#25110;&#32773; Command+Shift+3 (Mac) &#25235;&#21462;&#23631;&#24149;&#12290;&#35831;&#28857;&#20987;&#12290;</p>
+<p></p>
+<button type="button" id = "agreeConsentButtonCn" class = "button" style="float: left">&#26159;&#30340;&#65292;&#25105;&#21516;&#24847;</button>
+<button type="button" id = "disagreeConsentButtonCn" class = "button" style="float: right">&#19981;&#65292;&#25105;&#25298;&#32477;</button>
+</div>
+
+
+<!-- template for consent in English -->
+<div id = "consentEn">
+<h1>Consent</h1>
+<!-- Insert text here -->
+<p>You are invited to take part in a study about bicultural identities. This study is conducted by Dr. Kartik Sreenivasan and his associate Nela Noll from New York University Abu Dhabi (NYUAD).Below is a brief description of what you can expect if you choose to participate in this study. Please read this form carefully. After reading the form, if you consent to participate, please press the button "Yes I agree"; at the bottom of the page. If you prefer not to take part, please press "No, I refuse".</p>
+<p>Thank you!</p>
+<p><b>Purpose:</b> The goal of this project is to examine bicultural identities and their reactions to stimuli from these cultures.</p>
+<p><b>Procedure:</b> Your task as a participant is to fill out three simple surveys,write 4-6 sentences in response to a prompt, and view several images and react to a dot that will appear on the images with a button press. This should take around 60minutes of your time. No other action is required on your part.</p>
+<p><b>Volunteer participation:</b>Your participation to this study is solely on a voluntary basis. It is up to you whether or not to complete the study (participation in this study is voluntary). You may refuse to participate or withdraw at any time without penalty. For questionnaires, youhave the right to skip or not answer any questions you prefer not to answer.</p> 
+<p><b>Incentives:</b> You will receive an hourly rate of US $6 for taking part in this study.</p>
+<p><b>Benefits:</b> The research is designed to help investigators learn more about bicultural identities. Although you will receive no direct benefits, this research may help us better understand how people formand hold on tobicultural identities.</p>
+<p><b>Risks and inconveniences:</b>Beside the time investment, no inconveniences or risks are associated with your participation to this study by or from itself. As part of the study, we may ask you to reflect on some sensitive topics, such as death or pain.</p> 
+<p><b>Confidentiality:</b>Any information that is obtained in connection with this study and that can be identified with you will remain confidential and will be disclosed only with your permission or as required by law. Information produced from the study will be stored in computer files with an identifying code. The link between this code and your identity will be kept in a secure location. The overall results of these studies may be published but your name will not be used and your identity will not be revealed anywhere in these publications. Your research records will be kept on file electronically in a secure location, and will be saved indefinitely. These files will only be accessible to Dr. Sreenivasan or his Co-Investigator, Nela Noll.</p> 
+<p><b>Contact information:</b> This project is led by Dr. Kartik Sreenivasan at NYUAD (kks4@nyu.edu).If you have any questions or concerns pertaining to the research, please communicate with co-investigatorNela Noll (nela.noll@nyu.edu). This research has been reviewed and approved according to New York University Abu DhabiIRB procedures for research involving human subjects.If you have questions regarding your rights as research participant, please communicate with the Institutional Review Board of NYUAD at IRBnyuad@nyu.edu or +971 2-628-4313.</p>
+<p><b>Consent:</b> By clicking "Yes, I agree" below, you are indicating that you have read this consent form and agree to participate in this study. You can change your mind or withdraw at any point during the study. If you would like to save this consent form for your records, you can screen capture this consent form using the Windows+Print Screen buttons (PCs) or Command+Shift+3 (Mac). Please clickbelow.</p>
+
+<button type="button" id = "agreeConsentButtonEn" class = "button" style="float: left">Yes, I agree</button>
+<button type="button" id = "disagreeConsentButtonEn" class = "button" style="float: right">No, I refuse</button>
+<input type="hidden" name="isLanguageEnglish" value="0" id="isLanguageEnglish">
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- sensible and nonsense statements -->
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- template for instructions -->
+<div id = "instructionsEn">
+<h1>Instructions</h1>
+<!-- Insert text here -->
+<p> Your job is to detect the presence of a dot on the screen as quickly as possible. While you perform this task, you will see a variety of images on the screen. 
+Keep your gaze focused on the center of the screen at all times.</p>
+<p>The dot may appear at any time, either on the left of the screen, the right of the screen, on in the middle of the screen. 
+Press the Left Arrow key if you see the dot appear on the left. Press the Right Arrow key if the dot appears on the right. It's important that you press the button as quickly as possible!</p>
+<button type="button" id = "startExperimentButtonEn" class = "button" >Start Experiment</button>
+</div>
+
+<div id = "instructionsCn">
+<h1>&#23567;&#28857;&#25506;&#27979;&#20219;&#21153;</h1>
+<!-- Insert text here -->
+<p> &#25351;&#23548;&#35821;&#65306;&#20320;&#30340;&#20219;&#21153;&#26159;&#35201;&#23613;&#37327;&#24555;&#36895;&#22320;&#25506;&#27979;&#23631;&#24149;&#19978;&#21576;&#29616;&#30340;&#19968;&#20010;&#28857;&#12290;&#24403;&#20320;&#20570;&#36825;&#20010;&#20219;&#21153;&#30340;&#26102;&#20399;&#65292;&#20250;&#26377;&#24456;&#22810;&#19981;&#21516;&#30340;&#22270;&#29255;&#22312;&#23631;&#24149;&#19978;&#20986;&#29616;&#12290;&#20320;&#21487;&#20197;&#24573;&#30053;&#37027;&#20123;&#22270;&#29255;&#65292;&#22240;&#20026;&#23427;&#20204;&#36319;&#20320;&#30340;&#20219;&#21153;&#26080;&#20851;&#12290;&#20320;&#35201;&#19968;&#30452;&#32039;&#32039;&#30447;&#30528;&#23631;&#24149;&#20013;&#38388;&#12290;</p>
+<p>&#22278;&#28857;&#20250;&#38543;&#26102;&#20986;&#29616;&#22312;&#23631;&#24149;&#19978;&#65292;&#23427;&#21487;&#33021;&#20250;&#20986;&#29616;&#22312;&#23631;&#24149;&#30340;&#24038;&#36793;&#12289;&#21491;&#36793;&#25110;&#32773;&#20013;&#38388;&#12290;&#22914;&#26524;&#20320;&#30475;&#35265;&#22278;&#28857;&#20986;&#29616;&#22312;&#23631;&#24149;&#24038;&#36793;&#65292;&#35831;&#25665;&#19979;&#38190;&#30424;&#19978;&#30340;&#24038;&#38190;&#12290;&#22914;&#26524;&#22278;&#28857;&#20986;&#29616;&#22312;&#23631;&#24149;&#21491;&#36793;&#65292;&#35831;&#25665;&#19979;&#38190;&#30424;&#19978;&#30340;&#21491;&#38190;&#12290;&#36805;&#36895;&#22320;&#20570;&#20986;&#21453;&#24212;&#21313;&#20998;&#37325;&#35201;&#65281;</p>
+<button type="button" id = "startExperimentButtonCn" class = "button" >Start Experiment</button>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- template for trials -->
+<!-- here we define each of the trials with corresponding controls -->
+<div id = "fixDotCanvas" class = "trialDiv">
+<canvas id='mainCanvas' width='1340px' height='400'></canvas>
+</div>
+<!-- Matlab code to generate the strings
+
+for i = 1 : 50
+    fprintf('%s%d%s\n','<div id = "trial',i,'" class = "trialDiv">')
+    fprintf('%s\n','<canvas id=''mainCanvas'' width=''12040px'' height=''400''></canvas>')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="trialRT',i,'" value="NaN" id="trialRT',i,'">')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="keyPressedTrial',i,'" value="NaN" id="keyPressedTrial',i,'">')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="nameKeyPressedTrial',i,'" value="NaN" id="nameKeyPressedTrial',i,'">')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="sideTrial',i,'" value="NaN" id="sideTrial',i,'">')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="cultureTrial',i,'" value="NaN" id="cultureTrial',i,'">')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="correctRespTrial',i,'" value="NaN" id="correctRespTrial',i,'">')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="timeDotAppearsTrial',i,'" value="NaN" id="timeDotAppearsTrial',i,'">')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="dotXTrial',i,'" value="NaN" id="dotXTrial',i,'">')
+    fprintf('%s%d%s%d%s\n','<input type="hidden" name="dotYTrial',i,'" value="NaN" id="dotYTrial',i,'">')
+    fprintf('%s\n','</div>')
+end
+
+ -->
+<div id = "trial1" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT1" value="NaN" id="trialRT1">
+<input type="hidden" name="keyPressedTrial1" value="NaN" id="keyPressedTrial1">
+<input type="hidden" name="nameKeyPressedTrial1" value="NaN" id="nameKeyPressedTrial1">
+<input type="hidden" name="sideTrial1" value="NaN" id="sideTrial1">
+<input type="hidden" name="cultureTrial1" value="NaN" id="cultureTrial1">
+<input type="hidden" name="correctRespTrial1" value="NaN" id="correctRespTrial1">
+<input type="hidden" name="timeDotAppearsTrial1" value="NaN" id="timeDotAppearsTrial1">
+<input type="hidden" name="dotXTrial1" value="NaN" id="dotXTrial1">
+<input type="hidden" name="dotYTrial1" value="NaN" id="dotYTrial1">
+</div>
+<div id = "trial2" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT2" value="NaN" id="trialRT2">
+<input type="hidden" name="keyPressedTrial2" value="NaN" id="keyPressedTrial2">
+<input type="hidden" name="nameKeyPressedTrial2" value="NaN" id="nameKeyPressedTrial2">
+<input type="hidden" name="sideTrial2" value="NaN" id="sideTrial2">
+<input type="hidden" name="cultureTrial2" value="NaN" id="cultureTrial2">
+<input type="hidden" name="correctRespTrial2" value="NaN" id="correctRespTrial2">
+<input type="hidden" name="timeDotAppearsTrial2" value="NaN" id="timeDotAppearsTrial2">
+<input type="hidden" name="dotXTrial2" value="NaN" id="dotXTrial2">
+<input type="hidden" name="dotYTrial2" value="NaN" id="dotYTrial2">
+</div>
+<div id = "trial3" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT3" value="NaN" id="trialRT3">
+<input type="hidden" name="keyPressedTrial3" value="NaN" id="keyPressedTrial3">
+<input type="hidden" name="nameKeyPressedTrial3" value="NaN" id="nameKeyPressedTrial3">
+<input type="hidden" name="sideTrial3" value="NaN" id="sideTrial3">
+<input type="hidden" name="cultureTrial3" value="NaN" id="cultureTrial3">
+<input type="hidden" name="correctRespTrial3" value="NaN" id="correctRespTrial3">
+<input type="hidden" name="timeDotAppearsTrial3" value="NaN" id="timeDotAppearsTrial3">
+<input type="hidden" name="dotXTrial3" value="NaN" id="dotXTrial3">
+<input type="hidden" name="dotYTrial3" value="NaN" id="dotYTrial3">
+</div>
+<div id = "trial4" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT4" value="NaN" id="trialRT4">
+<input type="hidden" name="keyPressedTrial4" value="NaN" id="keyPressedTrial4">
+<input type="hidden" name="nameKeyPressedTrial4" value="NaN" id="nameKeyPressedTrial4">
+<input type="hidden" name="sideTrial4" value="NaN" id="sideTrial4">
+<input type="hidden" name="cultureTrial4" value="NaN" id="cultureTrial4">
+<input type="hidden" name="correctRespTrial4" value="NaN" id="correctRespTrial4">
+<input type="hidden" name="timeDotAppearsTrial4" value="NaN" id="timeDotAppearsTrial4">
+<input type="hidden" name="dotXTrial4" value="NaN" id="dotXTrial4">
+<input type="hidden" name="dotYTrial4" value="NaN" id="dotYTrial4">
+</div>
+<div id = "trial5" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT5" value="NaN" id="trialRT5">
+<input type="hidden" name="keyPressedTrial5" value="NaN" id="keyPressedTrial5">
+<input type="hidden" name="nameKeyPressedTrial5" value="NaN" id="nameKeyPressedTrial5">
+<input type="hidden" name="sideTrial5" value="NaN" id="sideTrial5">
+<input type="hidden" name="cultureTrial5" value="NaN" id="cultureTrial5">
+<input type="hidden" name="correctRespTrial5" value="NaN" id="correctRespTrial5">
+<input type="hidden" name="timeDotAppearsTrial5" value="NaN" id="timeDotAppearsTrial5">
+<input type="hidden" name="dotXTrial5" value="NaN" id="dotXTrial5">
+<input type="hidden" name="dotYTrial5" value="NaN" id="dotYTrial5">
+</div>
+<div id = "trial6" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT6" value="NaN" id="trialRT6">
+<input type="hidden" name="keyPressedTrial6" value="NaN" id="keyPressedTrial6">
+<input type="hidden" name="nameKeyPressedTrial6" value="NaN" id="nameKeyPressedTrial6">
+<input type="hidden" name="sideTrial6" value="NaN" id="sideTrial6">
+<input type="hidden" name="cultureTrial6" value="NaN" id="cultureTrial6">
+<input type="hidden" name="correctRespTrial6" value="NaN" id="correctRespTrial6">
+<input type="hidden" name="timeDotAppearsTrial6" value="NaN" id="timeDotAppearsTrial6">
+<input type="hidden" name="dotXTrial6" value="NaN" id="dotXTrial6">
+<input type="hidden" name="dotYTrial6" value="NaN" id="dotYTrial6">
+</div>
+<div id = "trial7" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT7" value="NaN" id="trialRT7">
+<input type="hidden" name="keyPressedTrial7" value="NaN" id="keyPressedTrial7">
+<input type="hidden" name="nameKeyPressedTrial7" value="NaN" id="nameKeyPressedTrial7">
+<input type="hidden" name="sideTrial7" value="NaN" id="sideTrial7">
+<input type="hidden" name="cultureTrial7" value="NaN" id="cultureTrial7">
+<input type="hidden" name="correctRespTrial7" value="NaN" id="correctRespTrial7">
+<input type="hidden" name="timeDotAppearsTrial7" value="NaN" id="timeDotAppearsTrial7">
+<input type="hidden" name="dotXTrial7" value="NaN" id="dotXTrial7">
+<input type="hidden" name="dotYTrial7" value="NaN" id="dotYTrial7">
+</div>
+<div id = "trial8" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT8" value="NaN" id="trialRT8">
+<input type="hidden" name="keyPressedTrial8" value="NaN" id="keyPressedTrial8">
+<input type="hidden" name="nameKeyPressedTrial8" value="NaN" id="nameKeyPressedTrial8">
+<input type="hidden" name="sideTrial8" value="NaN" id="sideTrial8">
+<input type="hidden" name="cultureTrial8" value="NaN" id="cultureTrial8">
+<input type="hidden" name="correctRespTrial8" value="NaN" id="correctRespTrial8">
+<input type="hidden" name="timeDotAppearsTrial8" value="NaN" id="timeDotAppearsTrial8">
+<input type="hidden" name="dotXTrial8" value="NaN" id="dotXTrial8">
+<input type="hidden" name="dotYTrial8" value="NaN" id="dotYTrial8">
+</div>
+<div id = "trial9" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT9" value="NaN" id="trialRT9">
+<input type="hidden" name="keyPressedTrial9" value="NaN" id="keyPressedTrial9">
+<input type="hidden" name="nameKeyPressedTrial9" value="NaN" id="nameKeyPressedTrial9">
+<input type="hidden" name="sideTrial9" value="NaN" id="sideTrial9">
+<input type="hidden" name="cultureTrial9" value="NaN" id="cultureTrial9">
+<input type="hidden" name="correctRespTrial9" value="NaN" id="correctRespTrial9">
+<input type="hidden" name="timeDotAppearsTrial9" value="NaN" id="timeDotAppearsTrial9">
+<input type="hidden" name="dotXTrial9" value="NaN" id="dotXTrial9">
+<input type="hidden" name="dotYTrial9" value="NaN" id="dotYTrial9">
+</div>
+<div id = "trial10" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT10" value="NaN" id="trialRT10">
+<input type="hidden" name="keyPressedTrial10" value="NaN" id="keyPressedTrial10">
+<input type="hidden" name="nameKeyPressedTrial10" value="NaN" id="nameKeyPressedTrial10">
+<input type="hidden" name="sideTrial10" value="NaN" id="sideTrial10">
+<input type="hidden" name="cultureTrial10" value="NaN" id="cultureTrial10">
+<input type="hidden" name="correctRespTrial10" value="NaN" id="correctRespTrial10">
+<input type="hidden" name="timeDotAppearsTrial10" value="NaN" id="timeDotAppearsTrial10">
+<input type="hidden" name="dotXTrial10" value="NaN" id="dotXTrial10">
+<input type="hidden" name="dotYTrial10" value="NaN" id="dotYTrial10">
+</div>
+<div id = "trial11" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT11" value="NaN" id="trialRT11">
+<input type="hidden" name="keyPressedTrial11" value="NaN" id="keyPressedTrial11">
+<input type="hidden" name="nameKeyPressedTrial11" value="NaN" id="nameKeyPressedTrial11">
+<input type="hidden" name="sideTrial11" value="NaN" id="sideTrial11">
+<input type="hidden" name="cultureTrial11" value="NaN" id="cultureTrial11">
+<input type="hidden" name="correctRespTrial11" value="NaN" id="correctRespTrial11">
+<input type="hidden" name="timeDotAppearsTrial11" value="NaN" id="timeDotAppearsTrial11">
+<input type="hidden" name="dotXTrial11" value="NaN" id="dotXTrial11">
+<input type="hidden" name="dotYTrial11" value="NaN" id="dotYTrial11">
+</div>
+<div id = "trial12" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT12" value="NaN" id="trialRT12">
+<input type="hidden" name="keyPressedTrial12" value="NaN" id="keyPressedTrial12">
+<input type="hidden" name="nameKeyPressedTrial12" value="NaN" id="nameKeyPressedTrial12">
+<input type="hidden" name="sideTrial12" value="NaN" id="sideTrial12">
+<input type="hidden" name="cultureTrial12" value="NaN" id="cultureTrial12">
+<input type="hidden" name="correctRespTrial12" value="NaN" id="correctRespTrial12">
+<input type="hidden" name="timeDotAppearsTrial12" value="NaN" id="timeDotAppearsTrial12">
+<input type="hidden" name="dotXTrial12" value="NaN" id="dotXTrial12">
+<input type="hidden" name="dotYTrial12" value="NaN" id="dotYTrial12">
+</div>
+<div id = "trial13" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT13" value="NaN" id="trialRT13">
+<input type="hidden" name="keyPressedTrial13" value="NaN" id="keyPressedTrial13">
+<input type="hidden" name="nameKeyPressedTrial13" value="NaN" id="nameKeyPressedTrial13">
+<input type="hidden" name="sideTrial13" value="NaN" id="sideTrial13">
+<input type="hidden" name="cultureTrial13" value="NaN" id="cultureTrial13">
+<input type="hidden" name="correctRespTrial13" value="NaN" id="correctRespTrial13">
+<input type="hidden" name="timeDotAppearsTrial13" value="NaN" id="timeDotAppearsTrial13">
+<input type="hidden" name="dotXTrial13" value="NaN" id="dotXTrial13">
+<input type="hidden" name="dotYTrial13" value="NaN" id="dotYTrial13">
+</div>
+<div id = "trial14" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT14" value="NaN" id="trialRT14">
+<input type="hidden" name="keyPressedTrial14" value="NaN" id="keyPressedTrial14">
+<input type="hidden" name="nameKeyPressedTrial14" value="NaN" id="nameKeyPressedTrial14">
+<input type="hidden" name="sideTrial14" value="NaN" id="sideTrial14">
+<input type="hidden" name="cultureTrial14" value="NaN" id="cultureTrial14">
+<input type="hidden" name="correctRespTrial14" value="NaN" id="correctRespTrial14">
+<input type="hidden" name="timeDotAppearsTrial14" value="NaN" id="timeDotAppearsTrial14">
+<input type="hidden" name="dotXTrial14" value="NaN" id="dotXTrial14">
+<input type="hidden" name="dotYTrial14" value="NaN" id="dotYTrial14">
+</div>
+<div id = "trial15" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT15" value="NaN" id="trialRT15">
+<input type="hidden" name="keyPressedTrial15" value="NaN" id="keyPressedTrial15">
+<input type="hidden" name="nameKeyPressedTrial15" value="NaN" id="nameKeyPressedTrial15">
+<input type="hidden" name="sideTrial15" value="NaN" id="sideTrial15">
+<input type="hidden" name="cultureTrial15" value="NaN" id="cultureTrial15">
+<input type="hidden" name="correctRespTrial15" value="NaN" id="correctRespTrial15">
+<input type="hidden" name="timeDotAppearsTrial15" value="NaN" id="timeDotAppearsTrial15">
+<input type="hidden" name="dotXTrial15" value="NaN" id="dotXTrial15">
+<input type="hidden" name="dotYTrial15" value="NaN" id="dotYTrial15">
+</div>
+<div id = "trial16" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT16" value="NaN" id="trialRT16">
+<input type="hidden" name="keyPressedTrial16" value="NaN" id="keyPressedTrial16">
+<input type="hidden" name="nameKeyPressedTrial16" value="NaN" id="nameKeyPressedTrial16">
+<input type="hidden" name="sideTrial16" value="NaN" id="sideTrial16">
+<input type="hidden" name="cultureTrial16" value="NaN" id="cultureTrial16">
+<input type="hidden" name="correctRespTrial16" value="NaN" id="correctRespTrial16">
+<input type="hidden" name="timeDotAppearsTrial16" value="NaN" id="timeDotAppearsTrial16">
+<input type="hidden" name="dotXTrial16" value="NaN" id="dotXTrial16">
+<input type="hidden" name="dotYTrial16" value="NaN" id="dotYTrial16">
+</div>
+<div id = "trial17" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT17" value="NaN" id="trialRT17">
+<input type="hidden" name="keyPressedTrial17" value="NaN" id="keyPressedTrial17">
+<input type="hidden" name="nameKeyPressedTrial17" value="NaN" id="nameKeyPressedTrial17">
+<input type="hidden" name="sideTrial17" value="NaN" id="sideTrial17">
+<input type="hidden" name="cultureTrial17" value="NaN" id="cultureTrial17">
+<input type="hidden" name="correctRespTrial17" value="NaN" id="correctRespTrial17">
+<input type="hidden" name="timeDotAppearsTrial17" value="NaN" id="timeDotAppearsTrial17">
+<input type="hidden" name="dotXTrial17" value="NaN" id="dotXTrial17">
+<input type="hidden" name="dotYTrial17" value="NaN" id="dotYTrial17">
+</div>
+<div id = "trial18" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT18" value="NaN" id="trialRT18">
+<input type="hidden" name="keyPressedTrial18" value="NaN" id="keyPressedTrial18">
+<input type="hidden" name="nameKeyPressedTrial18" value="NaN" id="nameKeyPressedTrial18">
+<input type="hidden" name="sideTrial18" value="NaN" id="sideTrial18">
+<input type="hidden" name="cultureTrial18" value="NaN" id="cultureTrial18">
+<input type="hidden" name="correctRespTrial18" value="NaN" id="correctRespTrial18">
+<input type="hidden" name="timeDotAppearsTrial18" value="NaN" id="timeDotAppearsTrial18">
+<input type="hidden" name="dotXTrial18" value="NaN" id="dotXTrial18">
+<input type="hidden" name="dotYTrial18" value="NaN" id="dotYTrial18">
+</div>
+<div id = "trial19" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT19" value="NaN" id="trialRT19">
+<input type="hidden" name="keyPressedTrial19" value="NaN" id="keyPressedTrial19">
+<input type="hidden" name="nameKeyPressedTrial19" value="NaN" id="nameKeyPressedTrial19">
+<input type="hidden" name="sideTrial19" value="NaN" id="sideTrial19">
+<input type="hidden" name="cultureTrial19" value="NaN" id="cultureTrial19">
+<input type="hidden" name="correctRespTrial19" value="NaN" id="correctRespTrial19">
+<input type="hidden" name="timeDotAppearsTrial19" value="NaN" id="timeDotAppearsTrial19">
+<input type="hidden" name="dotXTrial19" value="NaN" id="dotXTrial19">
+<input type="hidden" name="dotYTrial19" value="NaN" id="dotYTrial19">
+</div>
+<div id = "trial20" class = "trialDiv">
+<canvas id='mainCanvas' width='12040px' height='400'></canvas>
+<input type="hidden" name="trialRT20" value="NaN" id="trialRT20">
+<input type="hidden" name="keyPressedTrial20" value="NaN" id="keyPressedTrial20">
+<input type="hidden" name="nameKeyPressedTrial20" value="NaN" id="nameKeyPressedTrial20">
+<input type="hidden" name="sideTrial20" value="NaN" id="sideTrial20">
+<input type="hidden" name="cultureTrial20" value="NaN" id="cultureTrial20">
+<input type="hidden" name="correctRespTrial20" value="NaN" id="correctRespTrial20">
+<input type="hidden" name="timeDotAppearsTrial20" value="NaN" id="timeDotAppearsTrial20">
+<input type="hidden" name="dotXTrial20" value="NaN" id="dotXTrial20">
+<input type="hidden" name="dotYTrial20" value="NaN" id="dotYTrial20">
+</div>
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- template for questions -->
+<div id=ethnicityEn class = "questionsDiv" >
+<h1>Renouncing ethnicity</h1>
+<p>
+What is your propensity to accept the sole American identity? 
+</p>
+<div class="container">
+<div style="width:840px;">
+	<div style="float: left; width: 92px"> <!-- was 92 px in case of 840 -->
+           <div class="label" id="minlabel">Not at all</div>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  id="ethnRadioEn" name="ethnRadioEn" type="radio" value="1" /> <p>1</p>
+    </div>
+   <div style="float: left; width: 92px"> 
+           <input   id="ethnRadioEn" name="ethnRadioEn" type="radio" value="2" /> <p>2</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  id="ethnRadioEn" name="ethnRadioEn" type="radio" value="3" /> <p>3</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  id="ethnRadioEn" name="ethnRadioEn" type="radio" value="4" /> <p>4</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  id="ethnRadioEn" name="ethnRadioEn" type="radio" value="5" /> <p>5</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  id="ethnRadioEn" name="ethnRadioEn" type="radio" value="6" /> <p>6</p>
+    </div>
+      <div style="float: left; width: 92px"> 
+           <input  id="ethnRadioEn" name="ethnRadioEn" type="radio" value="7" /> <p>7</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <div class="label" id="maxlabel">Extremely</div>
+    </div>
+</div>
+</div>
+<button type="button" id = "nextToDebriefButtonEn" class = "disabled" >Next</button>
+<p>&nbsp;</p>
+
+</div>
+
+
+
+<div id=ethnicityCn class = "questionsDiv" >
+<h1>&#25918;&#24323;&#31181;&#26063;&#36523;&#20221;</h1>
+<p>
+&#20320;&#26377;&#22810;&#20542;&#21521;&#20110;&#25509;&#21463;&#21482;&#35201;&#32654;&#22269;&#20154;&#30340;&#36523;&#20221;
+</p>
+<div class="container">
+<div style="width:840px;">
+	<div style="float: left; width: 92px"> <!-- was 92 px in case of 840 -->
+           <div class="label" id="minlabel">&#19968;&#28857;&#20063;&#19981;</div>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  type = "radio"   id="ethnRadioCn" name="ethnRadioCn" type="radio" value="1" /> <p>1</p>
+    </div>
+   <div style="float: left; width: 92px"> 
+           <input  type = "radio"  id="ethnRadioCn" name="ethnRadioCn" type="radio" value="2" /> <p>2</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  type = "radio"  id="ethnRadioCn" name="ethnRadioCn" type="radio" value="3" /> <p>3</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  type = "radio"  id="ethnRadioCn" name="ethnRadioCn" type="radio" value="4" /> <p>4</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  type = "radio"  id="ethnRadioCn" name="ethnRadioCn" type="radio" value="5" /> <p>5</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <input  type = "radio"  id="ethnRadioCn" name="ethnRadioCn" type="radio" value="6" /> <p>6</p>
+    </div>
+      <div style="float: left; width: 92px"> 
+           <input  type = "radio"  id="ethnRadioCn" name="ethnRadioCn" type="radio" value="7" /> <p>7</p>
+    </div>
+    <div style="float: left; width: 92px"> 
+           <div class="label" id="maxlabel">&#38750;&#24120;&#22810;</div>
+    </div>
+</div>
+</div>
+<button type="button" id = "nextToDebriefButtonCn" class = "disabled" >&#25509;&#19979;&#26469;</button>
+<p>&nbsp;</p>
+
+</div>
+
+
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- template for debrief -->
+<div id = "debriefEn">
+<h1>Debriefing</h1>
+<p> Thank you very much for taking part in our study. In the following, you can read more about the purpose of this research as well as the specific hypotheses investigated.</p>
+
+<p>The purpose of this research was to examine the relationship between bicultural individual's salience of death-related thoughts and their reaction to cultural stimuli. During the first survey, we measured the extent to which you identify as bicultural. We then induced thoughts of either death or dental pain to affect the degree to which thoughts about your identity were relevant to you and how much you would hold on to them. Then, you saw a series of images that were related to both of your cultural identities. By measuring the time, it took you to respond to the dots, we were able to measure the degree to which you paid attention to each identity.</p>
+<p>We hypothesized that participants who were induced with death-related thoughts and were made more salient of one of their identities through language would pay more attention to one of their cultural identities. These findings will expand our understanding of how people form and hold on to cultural identities.</p>
+<p>Thank you very much for your participation.</p>
+<button type="button" id = "nextToEndOfExpButtonEn" class = "button" >Next</button>
+</div>
+
+<div id = "debriefCn">
+<h1>&#23454;&#39564;&#35828;&#26126; </h1>
+<p> &#38750;&#24120;&#24863;&#35874;&#24744;&#21442;&#21152;&#26412;&#23454;&#39564;&#12290;&#20197;&#19979;&#20869;&#23481;&#21253;&#21547;&#26356;&#22810;&#20851;&#20110;&#26412;&#30740;&#31350;&#30340;&#30446;&#30340;&#20197;&#21450;&#20855;&#20307;&#30340;&#30740;&#31350;&#20551;&#35774;&#12290;</p>
+
+<p>&#26412;&#30740;&#31350;&#26159;&#20026;&#20102;&#26816;&#39564;&#21452;&#37325;&#25991;&#21270;&#20010;&#20307;&#20013;&#27515;&#20129;&#30456;&#20851;&#24819;&#27861;&#30340;&#20984;&#26174;&#31243;&#24230;&#19982;&#36825;&#20123;&#20010;&#20307;&#23545;&#20110;&#25991;&#21270;&#21050;&#28608;&#30340;&#21453;&#24212;&#20043;&#38388;&#30340;&#20851;&#31995;&#12290;&#31532;&#19968;&#20221;&#38382;&#21367;&#32771;&#23519;&#24744;&#21452;&#37325;&#25991;&#21270;&#36523;&#20221;&#35748;&#21516;&#30340;&#31243;&#24230;&#12290;&#20043;&#21518;&#36890;&#36807;&#35825;&#23548;&#20986;&#19982;&#27515;&#20129;&#25110;&#32773;&#29273;&#30171;&#30456;&#20851;&#24819;&#27861;&#30340;&#26041;&#24335;&#65292;&#21435;&#24433;&#21709;&#24744;&#36523;&#20221;&#35748;&#21516;&#26041;&#38754;&#30340;&#24819;&#27861;&#19982;&#33258;&#25105;&#30340;&#20851;&#32852;&#31243;&#24230;&#65292;&#20197;&#21450;&#24744;&#20445;&#25345;&#36825;&#20123;&#24819;&#27861;&#30340;&#31243;&#24230;&#12290;&#25509;&#19979;&#26469;&#24744;&#30475;&#21040;&#19968;&#31995;&#21015;&#19982;&#24744;&#30340;&#20004;&#31181;&#25991;&#21270;&#36523;&#20221;&#22343;&#26377;&#20851;&#32852;&#30340;&#22270;&#29255;&#65292;&#36890;&#36807;&#27979;&#37327;&#24744;&#23545;&#22278;&#28857;&#21050;&#28608;&#30340;&#21453;&#24212;&#26102;&#65292;&#33021;&#22815;&#24471;&#30693;&#24744;&#23545;&#20110;&#27599;&#31181;&#25991;&#21270;&#36523;&#20221;&#30340;&#27880;&#24847;&#31243;&#24230;&#12290;</p>
+<p>&#30740;&#31350;&#20551;&#35774;&#24403;&#34987;&#35797;&#34987;&#35825;&#23548;&#20986;&#27515;&#20129;&#30456;&#20851;&#30340;&#24819;&#27861;&#65292;&#24182;&#19988;&#36890;&#36807;&#35821;&#35328;&#20307;&#29616;&#20986;&#20854;&#20013;&#19968;&#31181;&#25991;&#21270;&#36523;&#20221;&#30340;&#20984;&#26174;&#24615;&#26102;&#65292;&#23558;&#20250;&#25226;&#27880;&#24847;&#21147;&#26356;&#22810;&#30340;&#25918;&#22312;&#36825;&#19968;&#25991;&#21270;&#36523;&#20221;&#19978;&#38754;&#12290;&#36825;&#20123;&#32467;&#26524;&#23558;&#20250;&#25299;&#23637;&#25105;&#20204;&#23545;&#20110;&#20154;&#20204;&#26159;&#22914;&#20309;&#24418;&#25104;&#24182;&#20445;&#25345;&#25991;&#21270;&#36523;&#20221;&#36825;&#19968;&#38382;&#39064;&#30340;&#29702;&#35299;&#12290;</p>
+<p>&#38750;&#24120;&#24863;&#35874;&#24744;&#21442;&#21152;&#26412;&#23454;&#39564;&#12290;</p>
+<button type="button" id = "nextToEndOfExpButtonCn" class = "button" >&#25509;&#19979;&#26469;</button>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<div id = "endOfExperimentEn">
+<p> Thank you for participating.</p>
+</div>
+
+<div id = "endOfExperimentCn">
+<p> &#35874;&#35874;&#24744;&#30340;&#21442;&#19982;&#12290;</p>
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+<!-- here where the JavaScript comes into action -->
+<script >
+
+	/*
+	 * Legend
+	 cultureTrial<trialId> == 0 if Chinese picture is on the left, ==1 if American picture is on the left
+	 sideTrial<trialId> == 0 if dot appears on the left, ==1 if dot is on the right
+	 isLanguageEnglish == 0 if Chinese, ==1 if English
+	 isMortalSalience == 0 if Dental Salience, == 1 if Mortal Salience
+	 */
+
+     
+    //var subId = Math.round(1000*Math.random());//TODO: change to inputs from alert box
+    var subId = prompt("Please enter study and subject ID", "BESM1201");
+
+    
+	var newDate = new Date();
+	var lang = Math.round(Math.random());
+	var mortSalience = Math.round(Math.random());
+	console.log("is language English = "+lang);
+	//save the variable indicating the chosen language
+	$('#isLanguageEnglish').val(lang);
+	$('#isMortalSalience').val(mortSalience);
+	
+	
+	jsonSubjData = { 
+		    "subId":  subId,
+		    "timestamp": newDate,
+		    "isLanguageEnglish": lang,
+		    "isMortalSalience": mortSalience
+		  };
+
+
+	if(lang == 0){
+		$('#consentCn').show();	
+		$('#agreeConsentButtonCn').click(agree);
+		$('#disagreeConsentButtonCn').click(disagree);
+		
+	}else{
+		$('#consentEn').show();
+		$('#agreeConsentButtonEn').click(agree);
+		$('#disagreeConsentButtonEn').click(disagree);
+	}
+
+	//number of trials and bicultural questions
+	var nTrials = 10;//always even
+	
+	// timing parameters
+	var stimulusDuration = 5000;
+	var dotTimePadding = 500; //cut 500 msec from both sides
+	var preStimDuration = 1000;
+	var dotDuration = 200;
+	
+	// radius of the red dot
+	var radius = 10;
+	
+	//geometry
+	var imageWidth = 600;
+	var imageHeight = 350;
+	
+	// do not alter the sum unless you want to change the design of the experiment
+	var totalTrialDuration = preStimDuration+stimulusDuration+33.3;
+	
+	// generate condition sequence
+	// so far we have following conditions:
+	// Chinese Left no dot -- American right dot
+	// Chinese left dot --American right no dot
+	// American left no dot -- Chinese right dot
+	// American left dot -- Chinese right no dot
+	// Assume the sideForImage variable controls which cultural image appears on the left
+	// let's associate its 0 value with chinese  and 1 with American
+	// Also let's introduce isDot variable that equals to 0 if no dot appears and 1 when there is a dot
+	// our conditions are encoded as:
+	// 6 = 01|10 Chinese left dot --American right no dot
+	// 9 = 10|01 American left no dot -- Chinese right dot
+	// 5 = 01|01 Chinese Left no dot -- American right dot
+	// 10 = 10|10 American left dot -- Chinese right no dot
+	// we need to control 0110 and 1001 together (dot on the Chinese picture regardless of side) 
+	// as well as 0101 and 1010 (dot on the American picture regardless of side) 
+	// for this purpose let's create two arrays of length nTrials/2, one of randomly chosen 6-s and 9-s and 
+	// another of randomly chosen 5-s and 10-s. 
+	// The decoding to code varialbles will be correspondingly:
+	// cond 6 -- sideForImage = 0, side = 0
+	// cond 9 -- sideForImage = 1, side = 1
+	// cond 5 -- sideForImage = 0, side = 1
+	// cond 10 -- sideForImage = 1, side = 0
+	//thus we need to form two arrays -- one of 6 nd 9-s (dot on the Chinese) and another on 5-s and 10-s (dot on the Americans)
+	//concatenate them, shuffle and use in trials
+	
+	var condArray1 = createArrayOfTwoRandNums(nTrials/2,6,9);
+	var condArray2 = createArrayOfTwoRandNums(nTrials/2,5,10);
+	var condArray = shuffle(condArray1.concat(condArray2));
+	
+	imagefilesAmerican=[
+		'https://dl.dropboxusercontent.com/s/iz4m5n9otjs90ro/1_feature.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/auk3uxt6fhgx80d/1_KymL1vPMV4zFH7tbwBSGyw.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/xr3903kmx45adjh/002_thumb.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/xbwsgj075efcca5/3cfe0df2-a9a5-4297-9639-c80d66e013c1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ugg8oo0hmtnhosy/4th-of-july-menu-50-stars-bbq-chicken-ihod.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/87hy6s80qmcu100/10-strange-american-traditions-3.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/qxlqmmdudvnna7s/61v-RDV3%2BAL._SL1000_.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/uk5cagflncrptl2/71U%2B5KVElqL._SL1500_.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/s2h2hifxe2sl3bn/87c80acb3f31866df560073cf69efef6.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/8fbp06nwp7n71yn/91Cel%2BogO6L._SX355_.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/emfe67ph71aj2we/91fK5UJh7sL._SX385_.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/z7bzqq5id33rrcc/0715.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jqnmt2zyeoa3vor/000802_c569_0031_csls.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/cxrseojfcy00daw/980x.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/8gfu4np81ssl2yj/1200px-Apple_pie.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/bxyge2y2ocd8bdx/2016_09_29_12990_1475116504._large.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/azsi1nksjux2mqj/2018-Chrysler-300-Hompage-PromoTiles-Best-In-Class-FuelEconomy_52ed8ab10f9c1b7e10d11d438b2a2afb-retina.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/5sjxamyeh0b7d90/2019-chevrolet-silverado-review-1-2-640x640.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/0idaiy7flh4ve0h/002037.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7scbyh6ptrwzrzt/5679f899e6183e55008b45df-750-563.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/prwuk9q55kzlsk5/8251e2539a8f49cb8c99b92d2925e14b.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/zk21721o9a5b0nd/10605-photo.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/u638deyzb8yjmel/82794-green_dew.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ygurcco2y22t243/104112cc81df8a64f886694c713cf64241db2e1e.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/aughp6h9yplnci1/163216.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/cg1m3qa1f03lv4e/187306-131-1D18F8C1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/6ev8e29lcekbowp/4816410-image-crop-1080x1003-1535566908-728-9c13bd8ffe-1535716225.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/i2kopliwnywto2o/10291042_10203213141282447_7131419288208104675_n.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ygx8uirojv6al4s/13055781_1629785963927300_2519580095354729057_o.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jpywqeaoh4nki28/13331191.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/g180wkay3rc0cb0/20070401istockpbjbeauty.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/13l5r0f1cn969tl/20170627_Fourth-Of-July-BBQ-Recipes_BG_LP.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/70b1z6y2f3kemsk/99356923.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7qzabskqntuyrw1/104568946-GettyImages-450109704.530x298.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/lj00t469xjpapb6/104842390-GettyImages-873369338-nascar.1910x1000.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/h0x02hlz9eeo7ba/104901954-GettyImages-526662914-campbells.530x298.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/p609pkp1p863g1v/25559864410_233fdc0949_k.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/bt9413u9mm1n0fl/1443193646244.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/cgsh8fpuebcqg5f/1479924214921.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/un2y80r8o5ag3h3/1493148212322.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jr14opw27py2qwo/1516280141734.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/rpl01ci4vu52bxe/America_1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/cy5y6kx0lhlvfoo/America_3.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/m69983zi73v6dr1/America_4.JPG?raw=1',
+		'https://dl.dropboxusercontent.com/s/zxuq8xhy6ngb1zt/America_5.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/az4d4nij6upafsq/american_lifestyle_in_germany_by_americanmuscle-d79lmu2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/3c2vnyub5yax12e/american-car.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/mlgwacq18ik3vhr/american-culture.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/8rx1cf2smdsu63v/American-flag-Bald-eagle-symbols-of-America-HD-Wallpaper-High-Definition-1920x1080-1680x1050.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jkuepvdrx1wq3ti/american-flag-hamburg-background-2-2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/0du7arvf4u9sa0c/american-food-truck.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/fhq7fk20cz2k5u5/american-football.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/vv74jcxuoyb18gz/american-girl-dolls.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/2fif8vrvz38zr35/americandream.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/vc5bge4vy6fozv5/ap_100608157606-e1457478643722-1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/z4pg9a8pp86ty6a/AP01121804056-1280x720.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ecb72u5q3p1mw0r/arts-graphics-2008_1132503a.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/iknrbgrubdmno3y/athletics-angels-baseball_3.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/x8qmo30yf90blxw/banner.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ztbtic1nreu6rgu/baron-bagels-videoSixteenByNineJumbo1600.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/1lurg48f5er2b77/baseball-park-tour-ftr.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/zx9un9tj8ujk362/BBIYA5I.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/cui48s0uc5sjnlo/blue-jeans.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/2qfuh3fzlvgi6mo/BN-EQ025_footba_P_20140919135126.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/f1k8im07hqjpyd6/BN-XN939_3q40S_OR_20180220071958.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/y7ka9wvp5t6x5ch/bornintheusa1-1024x640.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/3eym61vtnrdxknk/broadway-district-tour-02.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/x99k9ai2xwh4bd8/Budweiser.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/a8fkt94f71frr5b/buffalo-wings-with-bluecheese-sauce-108741-1.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jo7ignmxizaqnhz/Burger-King.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/bbovqc8g2c50x5k/c8d00c364d43d5bad43717587c327a268cee5bbf.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/tbmfuppo2q0bi3q/Calor-Refrescate-con-un-Macchiato-gratis-de-Starbucks-43798802.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/dx4jswas6ntm6vy/Caterpillar-logo-large.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/6kp1815r4x0h88y/cc570c32-b6c6-47d1-a2de-e43556cd001d.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/mwuio8wsy54pd90/Christmas-2016-Belgium-Full-picture-of-truck-at-Grand-Place.JPG?raw=1',
+		'https://dl.dropboxusercontent.com/s/3os1t7o6m6h0e6w/da3b0d0ae6e8556eeb923f9feaa94017.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/wvqam8dqx2jmnyy/depositphotos_52025357-stock-photo-hollywood-walk-of-fame-mickey.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/daxke4n3el97dlr/doritos-nacho-cheese.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/rvgy1hpkghiitca/Download%20%281%29.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/qwblhyapfr00vbw/Download.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ol6xq0itnkdkv39/Dr-Pepper_Lawsuit_IPG.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/pybh0gjksmxe22n/dreamstimefree_978137.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ygoz86748l5uqks/DSC03961-1024x679.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ekndpyd0sni77z8/entry-BQZpPvrw-607231.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ado8l5bjar46nu2/Fast-Food-mcdonalds-article-660x330.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/m1frrw3ncow0q01/Feature-Marshmallow-Fluff-Baking-Dessert-Fudge-Rice-Krispy-Treats-Kitchen-Tips-1180x650.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/2mn01se0ordn3wt/fotolia_66442999_subscription_monthly_xxl.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/sw3d0h69febt1ww/FPLQWbU.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jut69of5w4an5rv/Germany-trucks-11.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/40btbo8ab69ax99/getty_112964141_363085.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/nst1u1dhrkj0jgf/GettyImages_GettyImages_458909887.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/msue4ztyp33fe76/gettyimages-94953697.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/q9luw7m112uh6di/GettyImages-877158112_1535665151363_96150284_ver1.0_640_480.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/8enj7tgy4hcua4h/girl-scouts-gty-mem-171012_16x9_1600.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/sje9mufp0rn621a/grilled-cheese-horizontal-jpg-1522266016.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/q7jnwh7x6w73069/halloween-hero-1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/kp2q2lnuwwzqy0y/Hamburger.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/awmuhpgdxfkfgia/header_special_3598x1635_1-1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/xl00x7o8o0sayig/Hellmans.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/6v3l5to7vzu1pbr/hollywood-sign-mulholland-highway.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/6cugw6sm3j4m7i3/hollywood-studios-sunset-boulevard-sunset-theater1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/mw7q1qxj65iiem0/holybibleflagas_hdv.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/vrtsjf9uos4k0zp/Ivy-League-Univesities-900x355.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/3un4kgnnhr8h27d/Kraft-Easy-Cheese1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/8knj7w0kekb2p14/landolakes.jpg-376%C3%97402.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/nv1u65u5e56kjgj/landscape_movies-american-beauty-mena-suvari.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/h2ajxqsj4crcl8s/landscape-1511361419-restaurants-thanksgiving.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/gjoxgaczc6i4dpy/Langhorne.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/egfan3aof4oo2cq/large_364aa932-ebf7-4380-8986-1181e7f55096.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/intxhldwaz1pux3/Long-Weekend-Barbeque.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/kp4ozqe0del8c05/main-qimg-f9f5a868f83e57213af08e12e9da3270.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/6tc6b4kyzcyi723/maxresdefault.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/fo8u3658k7ctcnb/MdQ79eiR9GAblTjaQZrg_corn-dog-2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/qftt69n4f8qz4gp/mickey-pretzels-1-2000.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/bg26w5gjhnwdoh9/microsoft_thumb.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/vigs2nnizmu6kuz/Nic%2BWise%2BUSA%2BSports%2BPictures%2BWeek%2BMarch%2B30%2B9ess9IoQmAJl.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7rahpu28z4zn46y/nintchdbpict000375554351.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/aadlfl8qobrlt28/Northampton_Diner.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/8c0gb53wpnns8ua/o-THANKSGIVING-PRAYER-facebook.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/tz319ys4zepk673/OlOuziNRVcXqzpX-1600x900-noPad.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/nvravuui15erwvu/Oman-Yitti-road.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/v8hx8imkvivekv7/Oreos-and-milk-645x430.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/b43m6rsqlp82vd8/os-disney-ticket-price-increase-20180211.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/4hzw6ze1p2mziwo/Pan-american-highway.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/pqrymgpjaddouir/patrioticPieJuly4thBigstock.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/6nzlcvtm0qv8wiv/product-classic-white.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/qik29g1rgpzksfy/rodeo.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/81sgp10ktkavor6/ryan-blaney-030218-usnews-getty-ftr_oalfxxvma7t01i1fp36mh3dhv.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/zm9006chmfvartu/s-l300.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/83bxxxkl1l4kxll/s3-news-tmp-136742-1-2-3--2x1--690.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/xmg6bcbh6daz8sk/salty-chips-1492548481.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/bn3yfgo2z2cas9p/Season-One-Episode-Guide-for-Little-House-on-the-Prairie-450x293.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/yerkv5c1pxee3py/Smores_IG_FINAL.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/00t3onozr892jxu/Stern-Looking-Cowboy.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/0rpll83sdgmp1yk/string-cheese-side.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/v8v3z4vy5bxtpex/Table-Flat-lay-680x454.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/m6zwf28i5g0lve3/thanksgiving-feature_080115.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/87iwoftw0fia2dm/thanksgiving-orig.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/notdjcuxhwtbysz/Thanksgiving-Parade-American-Character-Balloon.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/d0jr6puw6d5lr8m/the_hollywood_sign_h_2015.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/xod5mmlp02xmhip/tmg-article_default_mobile.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7y4gx3qjyneddlx/Urban-American-lifestyle-news-world-news-USA-news-1-938x450.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/6zwxkbs1pw604ni/usatsi_10374735-2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/sv22aimq0gnlxzf/verizonlogo-800x206.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jrzqm1lq0whltd8/Vintage-Diners.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/qsaauctpchi5zla/W9hRSNuY.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/4rv6tuz1th8dya6/walmart-fortune-5001.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/4rv6tuz1th8dya6/walmart-fortune-5001.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/w0e2gnpuud7j39q/Walmart-To-Buy-Jet.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/kgniuf3d3fs2fo1/WR.jpg?raw=1'
+	];
+	imagefilesChinese=[
+		'https://dl.dropboxusercontent.com/s/lz58yztesvt51nx/00-story-image-best-chinese-food-in-new-york.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/h223fib3mabpzcj/4b.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/4wr9qy6cnfvgamj/06_night-street-market-Kaifeng-China-1024x768.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/rfr6iqa625xce2v/6.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/zm7b5ia5k4yzu6y/88c977bee215ac8fd630e323dbde3938.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ymef6k7xor5p41n/91Zzf80tN0L._SL1500_.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/u38pmfj665cysq3/159.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/pzl0aw09kn2sm6y/220px-%E5%AD%94%E5%AD%90%E8%81%96%E8%B9%9F%E5%9C%96.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/hd6ndleicjcoryf/260px-Yin_yang.svg.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/mz3xrxf4ofv4yh3/435a18a0841d462d85292ba5_cp_299x186.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/wal74ndelf9q6xx/451E8A8500000578-4958094-image-a-1_1507380136648.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/po5d105dhujkrpj/613fV52xC8L._SX425_.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/07w6hyw2tw5hrcz/1200px-20090510_Shanghai_Yuyan_6573.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/oxy8pzgjh7340su/1200px-Shanghai_jade_buddha_temple_outside.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/weyvde4swl5axxt/1280-596348596-hongcun-village-in-anhui-province-china.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/j48t2vgaw9hxogm/1652_china_2_for_1_web_hero_image2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/5d1znc6tziorp9x/5905-chinese-culture.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/0ao2lqjtb2dq7s3/071792-2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/5bh7b1aetc2yjkm/071792-3.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/dcscso4q6smtcey/180710-China-iStock-860594926.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/wc94l50qxcsdbvo/201305-xl-pork-and-crab-soup-dumplings.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/xrp6og4xcowppx3/224816_0fe704e08e07aab4d269af753f73d4aad6f5f4a5.jpg_facebook.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/wgfheh1pn1gg6jh/1111721c-1bd9-494c-952f-9fb53e78d1a0-cream-cheese-tea.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/5il4u5gvu4axxsg/3073301-WGUKTHOH-7.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/5iwqrt4z18erd46/13478698.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/wbmtru13nxa3inh/20170819_CNP001_1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/0flmjidj0hix63r/134965685_14514803736441n.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/n0x2f0fbu48l18f/615982836-612x612.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/brqtphcniyw4duj/160825163321-china-luxury-house-23-super-169.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/222q3g0l2f69air/201812035550.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7lmku3lhno1g0qd/1383779466068.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/5573nq5b8pr64sh/20090929160130258.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/y88d4g773do306o/20160119120658933.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/35h8g6fbazq821f/A-guide-to-Chinas-culture-and-Chinese-Cuisine.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ajzn4p5am30vbqc/a3a087cc-4444-11e7-935d-dac9335a3205_1280x720_175157.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/x45g9aqzoit3v67/Alibaba-512X512-For_IOS_26643.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/vnmzyc6mfuznlcy/Ancient-China-Buildings-Traditional-Chinese-Architecture-Picture-Forbidden-City-at-Beijing-China.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/xm80mm8ehr7cmp2/apps.50658.13510798887582160.6841e217-ba88-46a8-b86f-25901f3e73f7.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/cfryx8d5o55r6me/BBQ-roaches-and-scorpions-night-market-beijing-china-e1436701097563.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/f72e50j3l5ofjuw/Beijing-Bugs-Eating-Wangfujing-23.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jx2g0l36ub3ffjg/beijing-shichahai-courtyard-house.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ll5op4qjvcugam9/c8af8e62-1cff-4c32-9073-7739373c0c85.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jlgq918yxhewmyd/c700x420.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/hmw4lwvlhlrj1qi/cheesetea_shutterstock.0.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/dqoz11bo24lfx6n/CHI_WUL_150401_2067-HDR-Edit-copy.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/m7cnzsx1s54jc8x/china%20nutrition-article1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ed637fzk4alzyx2/china_story_647_062017091454.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/dgn0uxqwfxrhm4d/China_Traffic_Street_iStock_small.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/e17jt9tdsv6zvyt/china-3.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/fsrvl0kos3ptip7/china-chowtaifook_pek50.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/sb7ds7p57rr956q/China-Housing.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/sydvodolglan01g/china-pollution_pek701.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/tqsqfd2bj71qs2c/China-Senate-House.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/xkacl6zhr8k4cvv/China-sunset.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/2wdrawae06x6oju/chinarev2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/tnkx9xwts4xdb32/Chinese_1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/2b50s72o5bm5yic/Chinese_2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ka9hqfg91hnt0u2/Chinese_3.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/pj57iqdi8mtghmv/chinese_house21.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/8j4uvkgh2kfsqem/chinese-2.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/6i3281f9398xllm/chinese-beer-can.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/02x94kv72zlunv5/chinese-consumer-Clean.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/wydkh9ezgd806dq/chinese-egg-crepes.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/82s02n9hsih6ktp/chinese-food-culture.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/s5cb14vsrm71tnk/chinese-food-traditions-the-interesting-facts-about-culture-and-traditions-in-china-awesome.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/dlgv1rom50e5fok/chinese-hot-pot.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/chq2h0sbqce8frk/Chinese-landscape.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/dk3rha21vonvlwk/Chinese-lanterns2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/y9m4j3hr3hg754r/Chinese-market-08.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/p44wgahbixlk0sz/chinese-markets-thinkstock-0605W1-3011A_1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/n4r0n2h9qe9w7j5/chinese-mooncake.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/otlxufrxuywzkew/Chinese-New-Year-678x381.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/11n9lpct230ez9x/chinese-new-year-dumplings.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/8rb1dm8lnmzib7r/chinese-new-year-traditions.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/4ydqjvq9owqgv5p/chinese-style-houses-in-bangkok.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/p0oek599k8yw11q/Chinese-vegetable-market.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/x21yy0e4sd8falb/chinese-wearing-cloth-masks-as-protection-against-air-pollution.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/akmncwywb1fu1pt/Chinese-wedding-wines-recommendations.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/asyb0rcs3n3s6f1/ChineseNewYear.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/5qijbxaa25y6ua5/choco-pie-yonhap.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/eva3xjac5291kjy/cocofresh.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/o2clx0zea9mk8x5/conf.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/wa4enhmn8hzwc6a/CS-FB3-Chinese-market-is-far-from-saturated.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/pyqpqi87br6vril/d12217bc290b7b942c27c9c105b0d4ee.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/l9iyrzvyrmwyssk/dcf1e0ec17d14df8fac9a7a57c7af63d-china.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/zfl64lcjwtzq65q/dim_sum_dumplings_1050x700.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/at3z3pga2jqx40p/dong-hua-men-night-market.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/6mwj4ykwwe8ys5h/Donghuamen-Night-Market-China.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/nddbx00rh5y0716/DSC_0009.JPG?raw=1',
+		'https://dl.dropboxusercontent.com/s/n26qrjv05dehck3/essential-chinese-ingredients.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/iplurzvv6jytuwb/fef71cd6-7081-4831-8cf5-d315e6daaf80.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/a5rrqs1eq47odq2/Feng-Shui-600x396.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/jzpolt77kpesgvi/filalpiety.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/6lrj07s8mxu386z/gettyimages-632438922.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/5g8h5ftr4uwmvt7/Gobi_Manchurian_Recipe.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/1nu7or1pxs2bsy7/hong-kong-night-market-night-market-preview.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7zasath5k7dv920/Hot-and-Sour-Noodles.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/cqtv1kiczvbdvkr/how-to-celebrate-chinese-new-year.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/3l0mbt94uehjsdl/Hsu-Changing-Meanings-of-Asian-Food-in-America.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/mozy24mhqx1jyw4/Humble_master.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/2mxoszkpnwss2xm/image_1476196212_90754488.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/awlx8d0unxc07zs/image.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/y7g8sk6e0jv5x7e/image06.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/9e488l98zgl3vl9/images%20%282%29.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ttc9772o7rbtj1c/images%20%283%29.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/4blqd0ttn69p62g/images.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/0iod6arme27qo2b/IMG_0882.JPG?raw=1',
+		'https://dl.dropboxusercontent.com/s/luse1z3f3e6drn0/Jia-Wei-Chinese-Restaurant-f2.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/6znphmk2d23hp8d/jizhua.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/fsr54r91ibskbo1/knot.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/32b7fow0gv0kqu7/kuihkapit.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/myh6t5yi0b29epc/ls.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7u154h2x9thcqtk/lunchtime_lectures.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/plj9k4su95zwbzd/main-qimg-2a4cb4b88a4c9b7e73107439bb62f7c8.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/txj5tgg9pjeofwk/main-qimg-6ce31a118fc68c7e061a852fc4fe5b20-c.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/beds8s70l25m54p/Making_candied_fruit_in_Tianjin_China.JPG?raw=1',
+		'https://dl.dropboxusercontent.com/s/691bb832q8scnga/Mao.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/51n9xl1i5v5xf5l/maxresdefault%20%281%29.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/fld10flr489p5oj/maxresdefault%20%282%29.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/tneeu8ka0s90uh9/maxresdefault%20%283%29.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/hxe69qwqd4trohr/maxresdefault.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/lfzl9kemn41nf31/mfile_55_1018679_1-600x450-600x420.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/l4w3llng4spm2la/milk-teas-in-singapore-8080578.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/ghgr0vdhb7zh7oy/mooncake.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/l89xsii7hq8ivqt/MWCH32-C26--22_hr.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/70r1f0ncq0zh5hv/new-year-embroidery.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/qnsiyvuhq1ppsip/nintchdbpict000296140695.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/02127pscdeh3xn5/perayaan-imlek-1024x768.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/l44drhma9qaljln/photo38.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/clvvbk1n6uc9ec8/PRXRNH4L4REJFMYGKGLV4LCO4M.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/z0o2kvm49gjv3en/pxqrocxwsjcc_3PZMkr3ZRKo6EwAmAyAkUw_soup-dumplings_squareThumbnail_en.jpeg?raw=1',
+		'https://dl.dropboxusercontent.com/s/fgb82sjdyq6oy3r/s-l300%20%281%29.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/dv8bqped7d52408/s-l300.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/845mdcaof40roqe/str2_relaxyufo_chester-770x470.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/v9hztqcsrl1037m/taiji-tai-chi-full-sized-hand-drawn-illustra-illustration-original-series-martial-arts-internal-chinese-martial-art-43947646.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/3qq8r5qxhcc5qs3/terracotta-army-warriors-xian.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/tn3rvm9sc86s1x2/theodor-lundqvist-438530-1516888037.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/czrwoghdbsj7zii/traditional-Chinese-medicine-1024x768.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7lszz3m03fggca2/traditions9.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/w291zrx9gy7ixta/tumblr_m1wqxd33XE1qz81uh.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7c9qywt95xf2xek/U102P200T1D216787F10DT20090208181223.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/2hej5pzxex5hrii/unnamed.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/039g63s2jmtjvu2/view-of-great-wall-china-93199461-59cc049a03f4020011c1608c.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/c3a4qbxo2vaixld/W020160119369945481171.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/zpdeyrf3zitp34c/water1.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/fboqehuz8we6q9t/Will-the-WeChat-Model-Work-in-the-West.png?raw=1',
+		'https://dl.dropboxusercontent.com/s/eb68sej2xfaighl/worm.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/mpd8579i0z2vxsz/xiaodao.jpg?raw=1',
+		'https://dl.dropboxusercontent.com/s/7tndeg47y9t2ula/yang_guifei_-_influential_concubine_of_emperor_xuanzong_cropped.jpg?raw=1'
+	];
+	
+	
+	var loadedImagesChinese = loadImages(imagefilesChinese);
+	var loadedImagesAmerican = loadImages(imagefilesAmerican);
+	
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+	/*
+	*
+	* 								Experiment body
+	*
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////
+	
+	/**
+	* In case if subject agrees to participate
+	*/
+	function agree(){
+		if(lang == 0){
+			$('#consentCn').hide();
+			dispInstructions();
+			
+		}
+		else{
+			$('#consentEn').hide();
+			dispInstructions();
+				
+		}
+	}
+	
+	/**
+	* If subject disagrees -- show end of experiment window
+	*/
+	function disagree(){
+		if(lang == 0){
+			$('#consentCn').hide();
+			$('#endOfExperimentCn').show();
+		}else{
+			$('#consentEn').hide();
+			$('#endOfExperimentEn').show();
+		}
+		$('#submitButton').show();
+	}
+	
+	
+	
+	/**
+	* for displaying instructions along with start button
+	*/
+	function dispInstructions(){
+		if(lang == 0){
+			$('#instructionsCn').show();
+			$('#startExperimentButtonCn').click(startExp);
+		}
+		else{
+			
+			$('#instructionsEn').show();
+			$('#startExperimentButtonEn').click(startExp);
+		}
+	}
+	
+	/**
+	* Initiates the experiment.
+	*/
+	function startExp(){
+		if(lang == 0){
+			$('#instructionsCn').hide();
+		}
+		else{
+			$('#instructionsEn').hide();
+		}
+		
+		//run over all trials
+		for(curTrial = 1;curTrial<=nTrials;curTrial++){
+			try{throw curTrial}
+    		catch(curTrial) {
+				setTimeout(function(){
+				showTrial(curTrial);	
+				},totalTrialDuration*(curTrial-1));
+			}
+		}
+		
+		//show debrief window
+		setTimeout(function(){
+			$('#trial' + nTrials).hide();
+			$('#fixDotCanvas').hide();
+			if(lang == 0){
+				$('#ethnicityCn').show();
+				
+				var btn = document.getElementById('nextToDebriefButtonCn');
+				
+				btn.disabled=true;
+				var elements = document.querySelectorAll("#ethnRadioCn");
+			
+				for (var i = 0; i < elements.length; i++) {
+				      elements[i].addEventListener("change", function() {
+				    	  console.log( $('input[name=ethnRadioCn]:checked').length);
+				      	  if( $('input[name=ethnRadioCn]:checked').length > 0 ) {
+				      		btn.disabled=false;
+				          	btn.className = "button";
+				      	} else {
+				          	btn.disabled=true;
+				      		btn.className = "disabled";
+				      	}
+				    });
+				 }
+				
+				//var btn = document.getElementById("nextToDebriefButtonCn");
+			    //btn.disabled = false;
+				$('#nextToDebriefButtonCn').click(dispDebrief);
+			}
+			else{
+				$('#ethnicityEn').show();
+				var btn = document.getElementById('nextToDebriefButtonEn');
+				btn.disabled=true;
+				
+				var elements = document.querySelectorAll("#ethnRadioEn");
+			
+				for (var i = 0; i < elements.length; i++) {
+				      elements[i].addEventListener("change", function() {
+				      	  if( $('input[name=ethnRadioEn]:checked').length > 0 ) {
+				      		btn.disabled=false;
+				          	btn.className = "button";
+				      	} else {
+				          	btn.disabled=true;
+				      		btn.className = "disabled";
+				      	}
+				    });
+				 }
+				//var btn = document.getElementById("nextToDebriefButtonEn");
+			    //btn.disabled = false;
+				$('#nextToDebriefButtonEn').click(dispDebrief);
+			}
+		},totalTrialDuration*(nTrials));
+	}
+
+	/**
+	* for displaying debrief
+	*/
+	function dispDebrief(){
+		if(lang == 0){
+			$("input[type='radio'][name='ethnRadioCn']:checked").val();
+			jsonSubjData["ethnRadio"] = $("input[type='radio'][name='ethnRadioCn']:checked").val();
+			
+			console.log("ethnicity report = "+$("input[type='radio'][name='ethnRadioCn']:checked").val());
+			$('#ethnicityCn').hide();
+			$('#debriefCn').show();
+			$('#nextToEndOfExpButtonCn').click(dispEndOfExperiment);
+		}
+		else{
+			$("input[type='radio'][name='ethnRadioEn']:checked").val();
+			jsonSubjData["ethnRadio"] = $("input[type='radio'][name='ethnRadioEn']:checked").val();
+			console.log("ethnicity report = "+$("input[type='radio'][name='ethnRadioEn']:checked").val());
+			$('#ethnicityEn').hide();
+			$('#debriefEn').show();
+			$('#nextToEndOfExpButtonEn').click(dispEndOfExperiment);
+		}
+		
+	}
+	
+	
+	/**
+	* for displaying eoe
+	*/
+	function dispEndOfExperiment(){
+		//download json
+	 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  	setTimeout(function() {download()}, 500);
+	  	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		if(lang == 0){
+			$('#debriefCn').hide();
+			$('#endOfExperimentCn').show();
+		}
+		else{
+			$('#debriefEn').hide();
+			$('#endOfExperimentEn').show();
+		}
+		$('#submitButton').show();
+	}
+	
+	////////////////////////////////////////////////////////////////////////////////////////////
+	/*
+	*
+	* 									Utilities
+	*
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////
+	function download() {
+        var fileContents=JSON.stringify(jsonSubjData, null, 2);
+        var fileName=subId+".json";
+        var pp = document.createElement('a');
+        pp.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileContents));
+        pp.setAttribute('download', fileName);
+        pp.click();
+    }
+    
+    
+	function clearBox(elementID)
+	{
+    	document.getElementById(elementID).innerHTML = "";
+	}
+	
+	
+	/**
+	* generates array of length l filled with randomly selected 2 numbers
+	* @param {int} length,{int} a,{int} b
+	*/
+	function createArrayOfTwoRandNums(len,a,b) {
+		var x = new Array(len);
+	    for (i = 0; i<len; i++) {
+	        if (Math.round(Math.random())==1){
+	        	x[i] = a; 
+	        }
+	        else{
+	        	x[i] = b; 
+	        } 
+	    }
+	    return x;
+	}
+	
+	
+	/**
+	* Shuffles array in place.
+	* @param {Array} a items An array containing the items.
+	*/
+	function shuffle(a) {
+	    var j, x, i;
+	    for (i = a.length - 1; i > 0; i--) {
+	        j = Math.floor(Math.random() * (i + 1));
+	        x = a[i];
+	        a[i] = a[j];
+	        a[j] = x;
+	    }
+	    return a;
+	}
+
+	// Image loading global variables
+	var loadcount = 0;
+	var loadtotal = 0;
+	var preloaded = false;
+	
+	
+	/**
+	*  Load images
+	* @param {Array} imagefiles items An array containing the path to images to load.
+	*/
+	function loadImages(imagefiles) {
+	    // Initialize variables
+	    loadcount = 0;
+	    loadtotal = imagefiles.length;
+	    preloaded = false;
+	 
+	    // Load the images
+	    var loadedimages = [];
+	    for (var i=0; i<imagefiles.length; i++) {
+	        // Create the image object
+	        var image = new Image();
+	 
+	        // Add onload event handler
+	        image.onload = function () {
+	            loadcount++;
+	        };
+	 		
+	        image.onerror = function() { // trigger if the image wasn't loaded
+	        	console.log($(this).attr('src') + ' - error!');
+	        	//if the image is not loaded try to relaod it
+	            reload(image, imagefiles[i], 3);
+	        }
+	        // Set the source url of the image
+	        image.src = imagefiles[i];
+	 
+	        // Save to the image array
+	        loadedimages[i] = image;
+	    }
+	 
+	    // Return an array of images
+	    return loadedimages;
+	}
+
+	
+	/**
+	* for reloading images
+	*/
+	function reload(image, URL, maxAttempts)
+	{
+	image.onerror = image.onabort = null;
+
+	  if (maxAttempts > 0)
+	  {
+		  var newImg = new Image ();
+		  newImg.src = URL;
+		  newImg.onerror = image.onabort = reload (image, URL, maxAttempts - 1);
+		  newImg.onload = function () {
+	      newImg.onerror = newImg.onabort = null;
+	      image = newImg;
+	    }
+	  }
+	  else
+	  {
+		  console.log('Image is failed to load...');
+	  }
+	}
+	
+	
+
+	
+	/**
+	* Displays current trial # trialId and records subject's responses
+	* @param {Integer} trialId number of trial to load.
+	*/
+	function showTrial(trialId){
+		console.log('-----------------------------------------------------'+'\n'+'trial #' + trialId);
+		var correctResp = NaN;
+		var pressTime = NaN;
+		jsonSubjData['keyPressedTrial' + trialId] = 'NaN';
+		jsonSubjData['trialRT' + trialId] = 'NaN';
+		jsonSubjData['correctRespTrial' + trialId] = 'NaN';
+		//$('#correctRespTrial' + trialId).val('NaN');
+		
+		/* the side where dot appears is selected randomly, 
+	    *   0  is left 
+	    *   1  is right
+	    */
+	   //specifies where the dot is to appear left or right
+		var side;
+		//specifies where the image is to appear left or right
+		var sideForImage;
+		var currentCond = condArray[trialId-1];
+		
+		// 6 = 01|10 Chinese left dot --American right no dot
+		// 9 = 10|01 American left no dot -- Chinese right dot
+		// 5 = 01|01 Chinese Left no dot -- American right dot
+		// 10 = 10|10 American left dot -- Chinese right no dot
+		// cond 6 -- sideForImage = 0, side = 0
+		// cond 9 -- sideForImage = 1, side = 1
+		// cond 5 -- sideForImage = 0, side = 1
+		// cond 10 -- sideForImage = 1, side = 0
+		
+		//dot on Chinese
+		if (currentCond == 6){
+			sideForImage = 0; 
+			side = 0;
+		}
+		if (currentCond == 9){
+			sideForImage = 1; 
+			side = 1;
+		}
+		//dot on American
+		if (currentCond == 5){
+			sideForImage = 0; 
+			side = 1;
+		}
+		if (currentCond == 10){
+			sideForImage = 1; 
+			side = 0;
+		}
+		
+		
+		$('#sideTrial' + trialId).val(side);
+		jsonSubjData['sideTrial' + trialId] = side;
+		
+		console.log("side dot appears = " + side);
+		$('#cultureTrial' + trialId).val(sideForImage);//0 for Chinese left, 1 for American left
+		jsonSubjData['cultureTrial' + trialId] = sideForImage;
+		console.log('#cultureTrial' + trialId+' = '+sideForImage);
+		
+		//create indeces array to eliminate appearance of similar images
+		var idxArrayArabic = [];
+		var idxArrayAmerican = [];
+		
+		for (var i = 1; i <= loadedImagesChinese.length; i++) {
+			idxArrayArabic.push(i);
+		} 
+		for (var i = 1; i <= loadedImagesAmerican.length; i++) {
+			idxArrayAmerican.push(i);
+		} 
+		// select the index of the first image
+		var idx1 = Math.floor(Math.random()*loadedImagesChinese.length);
+
+		var idx2 = Math.floor(Math.random()*loadedImagesAmerican.length);
+		
+		var imageObjects = [loadedImagesChinese[idx1],loadedImagesAmerican[idx2]];
+		
+		var imageObjLeft = imageObjects[sideForImage];
+		var imageObjRight = imageObjects[1-sideForImage];
+		
+		
+		var canvas = document.getElementById('mainCanvas');
+		var context = canvas.getContext('2d');
+		
+		var centerX = canvas.width/2;
+		var centerY = canvas.height/2;
+		
+		var xPadding = (canvas.width - 2*imageWidth)/4;
+		var yPadding = (canvas.height - imageHeight)/2
+		
+		console.log("xPadding  "+xPadding);
+		console.log("yPadding  "+yPadding);
+		console.log("centerX+xPadding  "+(centerX+xPadding));
+		console.log("canvas.width  "+canvas.width);
+		console.log("canvas.height  "+canvas.height);
+		console.log("imageWidth  "+imageWidth);
+		console.log("imageHeight  "+imageHeight);
+		
+		//starting with the pre-stimulus
+		$('#fixDotCanvas').show();
+		
+		setTimeout(function(){
+	
+		context.beginPath();
+	    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+		context.fillStyle = 'black';
+		context.lineWidth = 2;
+		context.strokeStyle = '#000000';
+		context.stroke();
+		
+		},0);
+		
+		
+		var preStimStart = new Date();
+		setTimeout(function(){
+	    	context.drawImage(imageObjLeft, xPadding, yPadding, imageWidth,imageHeight);
+	    	context.drawImage(imageObjRight, centerX+xPadding,yPadding,imageWidth,imageHeight);
+	    	console.log("preStimulusEnds " + (new Date()-preStimStart) +'msec');
+	    },preStimDuration); 
+		
+		
+		
+		/*      Show stimulus      */
+
+	   //dot should appear btw 500 and stimulusDuration-500 msec from the start of the stimulus presentation
+	   //somehow there is a delay at the start of the stumulus and if we specify dotTimePadding=500 msec as a min time for dot to appear it will appear before the image gets loaded
+	   //the dot dissappears 1000msec before the end of the stimulus presentation (3*dotTimePadding = dotTimePadding(500 msec from start) +2*dotTimePadding(500 msec before end))
+	   var timeWhenDotAppears = preStimDuration+Math.round(dotTimePadding+(stimulusDuration-3*dotTimePadding)*Math.random());
+	   
+	   
+	   var dotTimestamp;
+	   $('#timeDotAppearsTrial' + trialId).val(timeWhenDotAppears);
+	   jsonSubjData['timeDotAppearsTrial' + trialId] = timeWhenDotAppears;
+	   
+	   console.log("dot appears on " + timeWhenDotAppears +'msec');
+	  
+	   setTimeout(function(){
+	    	if(side == 0){ //left
+	    		var coords = [[xPadding/2, canvas.width/4, canvas.width/4],[canvas.height/2, yPadding/2, canvas.height-yPadding/2]];
+	    		randIdx = shuffle([0,1,2]);
+	     		var circCenterX = coords[0][randIdx[0]]; 
+	     		var circCenterY = coords[1][randIdx[0]]; 
+	     		$('#dotXTrial' + trialId).val(circCenterX);
+	     		$('#dotYTrial' + trialId).val(circCenterY);
+	     		jsonSubjData['dotXTrial' + trialId] = circCenterX;
+	     		jsonSubjData['dotYTrial' + trialId] = circCenterY;
+	     		context.beginPath();
+	     		context.arc(circCenterX, circCenterY, radius, 0, 2 * Math.PI, false);
+	     		context.fillStyle = 'red';
+	     		context.fill();
+	     		context.lineWidth = 2;
+	     		context.strokeStyle = '#ffffff';
+	     		context.stroke();
+	     		dotTimestamp = new Date();
+	   			setTimeout(function(){
+	     			context.clearRect(0,0,imageWidth+xPadding,canvas.height);
+	     			context.drawImage(imageObjLeft,xPadding, yPadding, imageWidth,imageHeight);
+	 			},dotDuration);//timing cannot exceed the iti otherwise the image will be drawn during iti	 
+	 		}// end of plotting on the left image
+	      else{//right
+	    	    var coords = [[canvas.width-xPadding/2, 3*canvas.width/4, 3*canvas.width/4],[canvas.height/2, yPadding/2, canvas.height-yPadding/2]];
+	    		randIdx = shuffle([0,1,2]);
+	     		var circCenterX = coords[0][randIdx[0]];
+	     		var circCenterY = coords[1][randIdx[0]];
+	     		$('#dotXTrial' + trialId).val(circCenterX);
+	     		$('#dotYTrial' + trialId).val(circCenterY);
+	     		jsonSubjData['dotXTrial' + trialId] = circCenterX;
+	     		jsonSubjData['dotYTrial' + trialId] = circCenterY;
+	     		context.beginPath();
+	     		context.arc(circCenterX, circCenterY, radius, 0, 2 * Math.PI, false);
+	     		context.fillStyle = 'red';
+	     		context.fill();
+	     		context.lineWidth = 2;
+	     		context.strokeStyle = '#ffffff';
+	     		context.stroke();
+	     		dotTimestamp = new Date();
+	   			setTimeout(function(){
+	      			context.clearRect(centerX+xPadding,0,imageWidth+xPadding,canvas.height);
+	      			context.drawImage(imageObjRight, centerX+xPadding,yPadding,imageWidth,imageHeight);
+	  			},dotDuration); //timing cannot exceed the iti otherwise the image will be drawn during iti
+
+	       }// end of plotting on the right image
+	    	
+	    },timeWhenDotAppears); 
+	 
+	   setTimeout(function(){
+		   context.drawImage(imageObjLeft, xPadding , yPadding, imageWidth,imageHeight);
+	       context.drawImage(imageObjRight, centerX+xPadding,yPadding,imageWidth,imageHeight);
+	   },timeWhenDotAppears+dotDuration); 
+	   
+
+	   //itiInterval
+	    setTimeout(function(){
+	    	context.clearRect(0,0,imageWidth+xPadding,canvas.height);
+	    	context.clearRect(centerX+xPadding,0,imageWidth+xPadding,canvas.height);
+	    	$(document).unbind("keydown.keyresp");
+	    	$(document).trigger('trial '+ trialId+ ' complete');
+		    console.log('trial '+ trialId+ ' complete');
+	    },preStimDuration+stimulusDuration); //6000
+	    
+	    
+
+	    
+	    $(document).bind("keydown.keyresp", function(event) {
+	    	$('#keyPressedTrial' + trialId).val(event.which);
+	    	jsonSubjData['keyPressedTrial' + trialId] = event.which;
+	    	console.log("pressed key ASCI code = "+(event.which));
+	        if (event.which == 39) {//right arrow
+	          $('#nameKeyPressedTrial' + trialId).val('right');
+	          jsonSubjData['nameKeyPressedTrial' + trialId] = 'right';
+	          pressTime = new Date()-dotTimestamp;
+	          $('#trialRT' + trialId).val(pressTime);
+	          jsonSubjData['trialRT' + trialId] = pressTime;
+	          console.log("reaction time = "+pressTime);
+	          
+	          if(side == 1){
+	        	  correctResp = 1;
+	        	  $('#correctRespTrial' + trialId).val(correctResp);
+	        	  jsonSubjData['correctRespTrial' + trialId] = correctResp;
+	        	  console.log("is response corrrect = "+correctResp);
+	          }
+	          else{
+	        	  correctResp = 0;
+	        	  $('#correctRespTrial' + trialId).val(correctResp);
+	        	  jsonSubjData['correctRespTrial' + trialId] = correctResp;
+	        	  console.log("is response corrrect = "+correctResp);
+	          }
+	          $(document).unbind("keydown.keyresp");
+	        }
+	        if (event.which == 37) {//left arrow
+	          console.log("pressed left");
+	          $('#nameKeyPressedTrial' + trialId).val('left');
+	          jsonSubjData['nameKeyPressedTrial' + trialId] = 'left';
+	          pressTime = new Date()-dotTimestamp;
+	          $('#trialRT' + trialId).val(pressTime);
+	          jsonSubjData['trialRT' + trialId] = pressTime;
+	          console.log("reaction time = "+pressTime);
+	          if(side == 0){
+	        	  correctResp = 1;
+	        	  $('#correctRespTrial' + trialId).val(correctResp);
+	        	  jsonSubjData['correctRespTrial' + trialId] = correctResp;
+	        	  console.log("is response corrrect = "+correctResp);
+	          }
+	          else{
+	        	  correctResp = 0;
+	        	  $('#correctRespTrial' + trialId).val(correctResp);
+	        	  jsonSubjData['correctRespTrial' + trialId] = correctResp;
+	        	  console.log("is response corrrect = "+correctResp);
+	          }
+	          $(document).unbind("keydown.keyresp");
+	        }
+	      });
+	    
+	}
+    
+ </script>
+    
+
+
+
+
